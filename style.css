@@ -1,0 +1,10 @@
+body {
+	text-align: center;
+}
+.changeBgColor {
+	margin: 10px auto 10px auto;
+	width: 200px;
+	height: 150px;
+	border: 1px solid black;
+	background-color: #7c9c94;
+}

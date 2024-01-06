@@ -1,4 +1,4 @@
-const body = document.querySelector('body');
+const div = document.querySelector('.changeBgColor');
 
 let intervalId;
 
@@ -13,15 +13,17 @@ const randomColor = () => {
 };
 
 const changeColor = () => {
-	intervalId = setInterval(changeBgColor, 1000);
+	if (!intervalId) {
+		intervalId = setInterval(changeBgColor, 1000);
+	}
 };
 
 function changeBgColor() {
-	body.style.backgroundColor = randomColor();
+	div.style.backgroundColor = randomColor();
 }
 const stopChange = () => {
 	clearInterval(intervalId);
-	console.log('stopped');
+	intervalId = null;
 };
 
 document.querySelector('#changeBg').addEventListener('click', changeColor);
