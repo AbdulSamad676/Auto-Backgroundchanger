@@ -29,3 +29,4 @@ const stopChange = () => {
 document.querySelector('#changeBg').addEventListener('click', changeColor);
 
 document.querySelector('#stop').addEventListener('click', stopChange);
+3;
